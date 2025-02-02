@@ -40,7 +40,7 @@ void PauseMenu_LateUpdate(void)
             else {
                 Music_Pause();
                 Music_PlayTrack(TRACK_PAUSE);
-                }
+            }
     }
     else {
         StateMachine(state) = RSDK_GET_ENTITY(self->triggerPlayer, Player)->state;
