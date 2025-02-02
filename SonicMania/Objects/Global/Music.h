@@ -16,6 +16,7 @@ typedef enum {
     TRACK_DROWNING     = 8,
     TRACK_GAMEOVER     = 9,
     TRACK_SUPER        = 10,
+    TRACK_PAUSE        = 14,
 #if MANIA_USE_PLUS
     TRACK_HBHMISCHIEF = 11,
     TRACK_SOUNDTEST   = 12,
