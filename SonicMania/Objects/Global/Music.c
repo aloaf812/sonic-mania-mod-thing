@@ -48,6 +48,7 @@ void Music_Create(void *data)
 void Music_StageLoad(void)
 {
     // Slot 0: stage music
+    // Variables: FILENAME|TRACK ID||LOOP POINT||
     Music_SetMusicTrack("Invincible.ogg", TRACK_INVINCIBLE, 139263);
     Music_SetMusicTrack("Sneakers.ogg", TRACK_SNEAKERS, 120960);
     Music_SetMusicTrack("BossMini.ogg", TRACK_MINIBOSS, 276105);
@@ -58,6 +59,7 @@ void Music_StageLoad(void)
     Music_SetMusicTrack("Drowning.ogg", TRACK_DROWNING, false);
     Music_SetMusicTrack("GameOver.ogg", TRACK_GAMEOVER, false);
     Music_SetMusicTrack("Super.ogg", TRACK_SUPER, 165375);
+    Music_SetMusicTrack("PauseMenu.ogg", TRACK_PAUSE, 1);
     Music_SetMusicTrack("HBHMischief.ogg", TRACK_HBHMISCHIEF, 381405);
     // Slot 12 (slot 11 in pre-plus): "no load"
     Music_SetMusicTrack("1up.ogg", TRACK_1UP, false);
@@ -842,6 +844,7 @@ void Music_EditorLoad(void)
     RSDK_ENUM_VAR("Drowning", TRACK_DROWNING);
     RSDK_ENUM_VAR("Game Over", TRACK_GAMEOVER);
     RSDK_ENUM_VAR("Super Sonic", TRACK_SUPER);
+    RSDK_ENUM_VAR("Pause Menu", TRACK_PAUSE);
 #if MANIA_USE_PLUS
     RSDK_ENUM_VAR("HBH Mischief", TRACK_HBHMISCHIEF);
     RSDK_ENUM_VAR("Sound Test", TRACK_SOUNDTEST);
