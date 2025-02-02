@@ -9,8 +9,6 @@
 
 ObjectPauseMenu *PauseMenu;
 
-// what does the void command void do aaaaaaaaa
-
 void PauseMenu_Update(void)
 {
     RSDK_THIS(PauseMenu);
@@ -33,14 +31,7 @@ void PauseMenu_LateUpdate(void)
 
     if (self->state) {
         if (Music_IsPlaying())
-            if (Music_IsPlaying(TRACK_PAUSE)){
-            
-            }
-
-            else {
-                Music_Pause();
-                Music_PlayTrack(TRACK_PAUSE);
-            }
+            Music_Pause();
     }
     else {
         StateMachine(state) = RSDK_GET_ENTITY(self->triggerPlayer, Player)->state;
@@ -147,8 +138,6 @@ void PauseMenu_Create(void *data)
 void PauseMenu_StageLoad(void)
 {
     PauseMenu->active = ACTIVE_ALWAYS;
-
-    // bleep or bloop
 
     PauseMenu->sfxBleep  = RSDK.GetSfx("Global/MenuBleep.wav");
     PauseMenu->sfxAccept = RSDK.GetSfx("Global/MenuAccept.wav");
@@ -351,7 +340,7 @@ void PauseMenu_FocusCamera(void)
             cameraPtr->screenID = 0;
             Camera_SetCameraBounds(cameraPtr);
         }
-        else { 
+        else {
             cameraPtr->screenID = 1;
         }
         LogHelpers_Print("cameraPtr->screenID %d => %d", prevScreen, cameraPtr->screenID);
